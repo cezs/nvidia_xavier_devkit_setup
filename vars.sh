@@ -1,15 +1,15 @@
-# Get the latest links from https://developer.nvidia.com/embedded/linux-tegra
+# Compare against links supplied at https://developer.nvidia.com/embedded/linux-tegra
 
 CC_PREFIX=aarch64-linux-gnu-
 KERNEL_DIR=kernel-4.9
-VERSION=32-3-1
+VERSION=32-4-4
 TOOLCHAIN_SRC=l4t-gcc-7-3-1-toolchain-64-bit
 TOOLCHAIN_DIR=gcc-linaro-7.3.1-2018.05-x86_64_aarch64-linux-gnu
-JETPACK=${HOME}/nvidia/nvidia_sdk/JetPack_4.3_Linux_P2888/Linux_for_Tegra
+JETPACK=${HOME}/nvidia/nvidia_sdk/JetPack_4.4.1_Linux_JETSON_AGX_XAVIER/Linux_for_Tegra # use the one containing Linux_for_Tegra directory
 CROSS_COMPILE=${HOME}/toolchain_bin_${VERSION}/${TOOLCHAIN_DIR}/bin/$CC_PREFIX
 KERNEL_OUT=${HOME}/l4t_sources_${VERSION}/public_sources/kernel/${KERNEL_DIR}/build
 KERNEL_MODULES_OUT=${JETPACK}/rootfs
-GIT_TAG=tegra-l4t-r32.3.1
+GIT_TAG=tegra-l4t-r32.4.4
 
 echo "VERSION: $VERSION"
 echo "TOOLCHAIN_SRC: $TOOLCHAIN_SRC"
